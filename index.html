@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/870b6f2e22.js" crossorigin="anonymous"></script>
+    <script src="main.js" defer></script>
+    <title>Weather</title>
+</head>
+<body>
+    <header>
+        <form class="search" action="">
+            <label class="form-label" for="location">Location:</label>
+            <input type="text" name="location" id="location">
+            <button><i class="fa-solid fa-magnifying-glass"></i></button>
+            <label class="toggle" for="toggle-button">
+                <input class="toggle-input" type="checkbox" name="" id="toggle-button">
+                <div class="toggle-fill"></div> 
+            </label>
+        </form>
+    </header>
+    <div class="weather-card">
+        <div class="city-name">Bend</div>
+        <div class="temp-current">70&deg;</div>        
+        <div class="temp-range">High/Low: 73&deg;/66&deg;</div>
+        <div class="icon">
+            <div class="description">Clear sky</div>
+            <img id="icon" src="" alt="">
+        </div>
+    </div>
+    
+
+</body>
+</html>

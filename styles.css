@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Mukta:wght@500&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Mukta', sans-serif;
+}
+form{
+    display: inline-block;
+}
+body{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+button{
+    background: none;
+    border: none;
+    font-size: 2rem;
+    margin-left: -5rem;
+}
+header{
+    grid-column: span 3 ;
+
+}
+header>form{
+    font-size: 2rem;
+    display: flex;
+    justify-content: center;
+    padding: 2em 0;
+    gap: 1em;
+    line-height: 2rem
+}
+header>form>input{
+    font-size: 2rem;
+    padding-left: 5px;
+    border-radius: 5px;
+}
+form{
+    margin: 0;
+    padding: 0;
+    line-height: 2rem
+}
+.form-label{
+    padding-top: 14px;
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: 500;
+    
+    vertical-align: 50%;
+    color: black;
+    
+}
+
+.weather-card{
+    display: grid;
+    
+    grid-column: span 3;
+    align-items: center;
+    justify-items: center;
+    margin-top: 2em;
+    padding: 2em;
+    font-size: 2rem;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+.icon{
+    display: grid;
+    justify-items: center;
+}
+
+/* toggle switch */
+
+.toggle{
+    --width: 100px;
+    --height: calc(var(--width)/2);
+    --border-radius: calc(var(--height)/2);
+
+    display: inline-block;
+    cursor: pointer;
+}
+.toggle-input{
+    display: none;
+}
+.toggle-fill{
+    position: relative;
+    width: var(--width);
+    height: var(--height);
+    border-radius: var(--border-radius);
+    background: #dddd;
+    transition: background .2s;
+}
+.toggle-fill::after{
+    content: "\00B0 F";
+    text-align: center;
+    line-height: var(--height);
+    font-size: 100%;
+    
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: var(--height);
+    width: var(--height);
+    background-color: blueviolet;
+    box-shadow: 0 0 10px hsla(0, 0%, 0%, 0.25);
+    border-radius: var(--border-radius);
+    transition: transform .2s;
+}
+.toggle-input:checked ~ .toggle-fill{
+    background-color: aqua;
+
+}
+.toggle-input:checked ~ .toggle-fill::after{
+    transform: translateX(var(--height));
+    content: "\00B0 C";
+}
